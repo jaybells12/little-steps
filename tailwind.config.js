@@ -13,7 +13,11 @@ module.exports = {
       fontFamily: {
         sans: ["--font-poppins", ...defaultTheme.fontFamily.sans],
       },
-      colors: {},
+      colors: {
+        primary: "#FFF",
+        accent: "#6ED1BF",
+        second: "#FFEBE4",
+      },
       backgroundImage: {
         home: "url('/bg_home.png')",
         landing: "url('/bg_landing-page.png')",
