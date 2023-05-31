@@ -20,7 +20,8 @@ module.exports = {
       },
       backgroundImage: {
         home: "url('/bg_home.png')",
-        landing: "url('/bg_landing-page.png')",
+        landing:
+          "linear-gradient(to bottom, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 90%), url('/bg_landing-page.png')",
         signup: "url('/bg_sign-up.png')",
         map: "url('/bg_cartography.png')",
       },
@@ -28,3 +29,4 @@ module.exports = {
   },
   plugins: [require("@tailwindcss/forms")],
 };
+
