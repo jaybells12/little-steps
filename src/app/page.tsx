@@ -1,16 +1,19 @@
 import Link from "next/link";
 import { CardShell } from "@/components/CardShell";
+import { Button } from "@/components/Button";
+import { Nav } from "@/components/Nav";
 
 export default function Home() {
   return (
-    <div
+    <section
       className={
         "h-screen w-full bg-landing bg-cover bg-center bg-no-repeat bg-origin-content pb-24"
       }
     >
+      <Nav />
       <CardShell
         title="Welcome to Little Steps!"
-        className={"w-10/12 relative -bottom-[40svh]"}
+        className={"w-10/12 mt-52"}
       >
         <p
           className={
@@ -19,20 +22,12 @@ export default function Home() {
         >
           Please sign-in to keep records of your students' progress.
         </p>
-        <Link
-          href={"/"}
-          className={"bg-accent rounded-full px-6 py-2.5 inline-block"}
-        >
-          <span
-            className={
-              "text-primary font-bold tracking-[0.03em] inline-block align-super"
-            }
-          >
-            Sign-In
-          </span>
-        </Link>
+        <Button
+          text={"Sign-In"}
+          link={"/"}
+        />
       </CardShell>
-    </div>
+    </section>
   );
 }
 
