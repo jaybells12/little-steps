@@ -16,7 +16,7 @@ export const CardShell = ({
     >
       <h2
         className={
-          "text-black font-bold tracking-[0.03em] text-4xl leading-normal pb-8"
+          "text-black font-bold text-center tracking-def text-4xl leading-normal mb-8"
         }
       >
         {title}

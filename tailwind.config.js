@@ -17,12 +17,18 @@ module.exports = {
         primary: "#FFF",
         accent: "#6ED1BF",
         second: "#FFEBE4",
+        lighttext: "#A0A0A0",
+        darktext: "#404040",
+      },
+      letterSpacing: {
+        def: "0.03em",
       },
       backgroundImage: {
         home: "url('/bg_home.png')",
         landing:
           "linear-gradient(to bottom, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 90%), url('/bg_landing-page.png')",
-        signup: "url('/bg_sign-up.png')",
+        signin:
+          "radial-gradient(circle at 32%, rgba(255,255,255,0)30%, rgb(255, 255, 255)45%),url('/bg_sign-in.png')",
         map: "url('/bg_cartography.png')",
       },
     },

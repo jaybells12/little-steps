@@ -11,15 +11,9 @@ export const Button = (props: ButtonProps) => {
   return (
     <Link
       href={link}
-      className={`bg-accent rounded-full px-6 py-2.5 ${className}`} //inline-block
+      className={`block bg-accent rounded-full px-6 pt-2.5 pb-3.5 text-primary font-bold tracking-def text-center ${className}`} //inline-block
     >
-      <span
-        className={
-          "text-primary font-bold tracking-[0.03em] align-super" //inline-block align-super
-        }
-      >
-        {text}
-      </span>
+      {text}
     </Link>
   );
 };

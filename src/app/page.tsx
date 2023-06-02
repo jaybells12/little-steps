@@ -1,23 +1,22 @@
-import Link from "next/link";
 import { CardShell } from "@/components/CardShell";
 import { Button } from "@/components/Button";
 import { Nav } from "@/components/Nav";
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <section
+    <main
       className={
-        "h-screen w-full bg-landing bg-cover bg-center bg-no-repeat bg-origin-content pb-24"
+        "h-screen w-full bg-landing bg-[size:1200px_800px] bg-[position:center_-50px] bg-no-repeat"
       }
     >
       <Nav />
       <CardShell
         title="Welcome to Little Steps!"
-        className={"w-10/12 mt-52"}
+        className={"w-80 mt-64"}
       >
         <p
           className={
-            "text-black text-2xl font-light pb-6 text-center leading-9 px-6"
+            "text-black text-2xl font-light pb-8 text-center leading-9 px-6"
           }
         >
           Please sign-in to keep records of your students' progress.
@@ -27,7 +26,7 @@ export default function Home() {
           link={"/"}
         />
       </CardShell>
-    </section>
+    </main>
   );
 }
 
