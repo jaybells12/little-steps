@@ -1,3 +1,11 @@
+import { Menu } from "@/components/Menu";
+import { Nav } from "@/components/Nav";
+
 export default function HomePage(props: any) {
-  return <div>Welcome to the home page!</div>;
+  return (
+    <section className={"bg-map"}>
+      <Nav />
+      <Menu />
+    </section>
+  );
 }
