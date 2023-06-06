@@ -51,10 +51,12 @@ export const Menu = () => {
     <nav className={`rounded-t-lg bg-accent h-screen ${containerWidth}`}>
       <ul className={`flex flex-col gap-8  px-1 pt-1 items-center`}>
         <li
-          className={`w-full relative h-12 rounded-md flex items-center justify-center text-primary hover:text-accent  hover:bg-primary`}
+          className={`w-full relative h-12 rounded-md flex items-center text-primary hover:text-accent  hover:bg-primary`}
           onClick={handleClick}
         >
-          <RightArrowIcon className={`${isOpen && "rotate-180"}`} />
+          <RightArrowIcon
+            className={`w-6 h-6 ml-3 ${isOpen && "rotate-180"}`}
+          />
         </li>
         {items.map((item, idx) => (
           <MenuItem
