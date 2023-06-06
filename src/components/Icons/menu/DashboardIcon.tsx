@@ -1,4 +1,4 @@
-import { IconProps } from ".";
+import { IconProps } from "..";
 
 export const DashboardIcon = ({ className }: IconProps) => {
   return (

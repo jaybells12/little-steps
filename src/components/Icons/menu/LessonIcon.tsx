@@ -1,4 +1,4 @@
-import { IconProps } from ".";
+import { IconProps } from "..";
 
 export const LessonIcon = ({ className }: IconProps) => {
   return (
