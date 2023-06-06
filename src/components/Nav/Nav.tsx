@@ -4,7 +4,7 @@ import { Button } from "../Button";
 import Image from "next/image";
 import { UserBlock } from "./UserBlock";
 import { useContext } from "react";
-import { AuthContext } from "@/app/AuthProvider";
+import { AuthContext } from "@/AuthProvider";
 
 export type NavProps = {};
 

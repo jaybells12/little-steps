@@ -1,4 +1,4 @@
-import { AuthProvider } from "./AuthProvider";
+import { AuthProvider } from "../AuthProvider";
 import "./globals.css";
 import { Poppins } from "next/font/google";
 
