@@ -1,10 +1,16 @@
+"use client";
+
 import { Button } from "../Button";
 import Image from "next/image";
 import { UserBlock } from "./UserBlock";
+import { useContext } from "react";
+import { AuthContext } from "@/app/AuthProvider";
 
 export type NavProps = {};
 
-export const Nav = (props: NavProps) => {
+export const Nav = () => {
+  const isAuth = useContext(AuthContext);
+
   return (
     <nav
       className={
@@ -24,14 +30,18 @@ export const Nav = (props: NavProps) => {
         <p>Little Steps</p>
       </div>
       {/* Here, if user is authenticated (context) then a userBlock is rendered instead of sign-in button */}
-      {/* <Button
-        text={"Sign-In"}
-        link={"/"}
-      /> */}
-      <UserBlock
-        userName={"Ms. Claire"}
-        userImage={"/sample-profile-pic.jpg"}
-      />
+
+      {isAuth ? (
+        <UserBlock
+          userName={"Ms. Claire"}
+          userImage={"/sample-profile-pic.jpg"}
+        />
+      ) : (
+        <Button
+          text={"Sign-In"}
+          link={"/"}
+        />
+      )}
     </nav>
   );
 };
