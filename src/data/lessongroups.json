@@ -1,0 +1,92 @@
+[
+  {
+    "_id": "01",
+    "name": "Practical Life",
+    "lessons": [
+      {
+        "_id": "01",
+        "name": "Lesson 01"
+      },
+      {
+        "_id": "02",
+        "name": "Lesson 02"
+      },
+      {
+        "_id": "03",
+        "name": "Lesson 03"
+      }
+    ]
+  },
+  {
+    "_id": "02",
+    "name": "Sensorial",
+    "lessons": [
+      {
+        "_id": "04",
+        "name": "Lesson 01"
+      },
+      {
+        "_id": "05",
+        "name": "Lesson 02"
+      },
+      {
+        "_id": "06",
+        "name": "Lesson 03"
+      }
+    ]
+  },
+  {
+    "_id": "03",
+    "name": "Language",
+    "lessons": [
+      {
+        "_id": "07",
+        "name": "Lesson 01"
+      },
+      {
+        "_id": "08",
+        "name": "Lesson 02"
+      },
+      {
+        "_id": "09",
+        "name": "Lesson 03"
+      }
+    ]
+  },
+  {
+    "_id": "04",
+    "name": "Mathematics",
+    "lessons": [
+      {
+        "_id": "10",
+        "name": "Lesson 01"
+      },
+      {
+        "_id": "11",
+        "name": "Lesson 02"
+      },
+      {
+        "_id": "12",
+        "name": "Lesson 03"
+      }
+    ]
+  },
+  {
+    "_id": "05",
+    "name": "Cultural",
+    "lessons": [
+      {
+        "_id": "13",
+        "name": "Lesson 01"
+      },
+      {
+        "_id": "14",
+        "name": "Lesson 02"
+      },
+      {
+        "_id": "15",
+        "name": "Lesson 03"
+      }
+    ]
+  }
+]
