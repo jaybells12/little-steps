@@ -14,7 +14,7 @@ export const LessonGroup = ({ name, lessons, students }: LessonGroupProps) => {
   return (
     <>
       <tr className={'bg-accent/25 h-[38.5px] border-y border-[#E0E0E0]'}>
-        <td>{name}</td>
+        <td className={'font-bold tracking-def px-4'}>{name}</td>
         {blankCells}
       </tr>
       {lessons.map((lesson, index) => (

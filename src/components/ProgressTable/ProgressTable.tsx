@@ -18,9 +18,9 @@ export const ProgressTable = ({
             {students.map((student, index) => (
               <td
                 key={index}
-                className='tb-stud border-x border-[#E0E0E0]'
+                className='tb-stud border-x border-[#E0E0E0] leading-[34px] ps-4'
               >
-                {student.name}
+                {student.name.replace(/[a-z]+$/g, '.')}
               </td>
             ))}
           </tr>
