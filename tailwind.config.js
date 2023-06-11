@@ -1,27 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 
-import defaultTheme from "tailwindcss/defaultTheme";
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    data: {
+      i: 'cell="i"',
+      p: 'cell="p"',
+      m: 'cell="m"',
+      w: 'cell="w"',
+    },
     extend: {
       fontFamily: {
-        sans: ["--font-poppins", ...defaultTheme.fontFamily.sans],
+        sans: ['--font-poppins', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#FFF",
-        accent: "#6ED1BF",
-        second: "#FFEBE4",
-        lighttext: "#A0A0A0",
-        darktext: "#404040",
+        primary: '#FFF',
+        accent: '#6ED1BF',
+        second: '#FFEBE4',
+        lighttext: '#A0A0A0',
+        darktext: '#404040',
       },
       letterSpacing: {
-        def: "0.03em",
+        def: '0.03em',
       },
       backgroundImage: {
         home: "url('/bg_home.png')",
@@ -33,6 +39,6 @@ module.exports = {
       },
     },
   },
-  plugins: [require("@tailwindcss/forms")],
+  plugins: [require('@tailwindcss/forms')],
 };
 

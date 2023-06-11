@@ -10,25 +10,32 @@ export const ProgressTable = ({
   students,
 }: ProgressTableProps) => {
   return (
-    <table>
-      <thead>
-        <tr>
-          <td></td>
-          {students.map((student, index) => (
-            <td key={index}>{student.name}</td>
+    <article className={'bg-white p-8 w-fit'}>
+      <table>
+        <thead>
+          <tr className={'border-b-2 border-[#E0E0E0]'}>
+            <td></td>
+            {students.map((student, index) => (
+              <td
+                key={index}
+                className='tb-stud border-x border-[#E0E0E0]'
+              >
+                {student.name}
+              </td>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {lessonGroups.map((group, index) => (
+            <LessonGroup
+              key={index}
+              name={group.name}
+              lessons={group.lessons}
+              students={students}
+            />
           ))}
-        </tr>
-      </thead>
-      <tbody>
-        {lessonGroups.map((group, index) => (
-          <LessonGroup
-            key={index}
-            name={group.name}
-            lessons={group.lessons}
-            students={students}
-          />
-        ))}
-      </tbody>
-    </table>
+        </tbody>
+      </table>
+    </article>
   );
 };
