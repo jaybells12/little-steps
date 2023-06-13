@@ -10,18 +10,24 @@ export const ProgressTable = ({
   students,
 }: ProgressTableProps) => {
   return (
-    <article className={'bg-white p-8 w-fit'}>
-      <table>
+    <article
+      className={
+        'bg-white p-8 w-fit rounded-[50px] ms-14 mt-[57px] whitespace-nowrap'
+      }
+    >
+      <table
+        className={'border-separate border-spacing-0 border-r border-[#E0E0E0]'}
+      >
         <thead>
-          <tr className={'border-b-2 border-[#E0E0E0]'}>
-            <td></td>
+          <tr className={'sticky top-[57px]'}>
+            <td className={'bg-white border-b border-e border-[#E0E0E0]'}></td>
             {students.map((student, index) => (
-              <td
+              <th
+                className='tb-stud bg-white border-l border-r border-b border-[#E0E0E0] ps-4 leading-[34px]'
                 key={index}
-                className='tb-stud border-x border-[#E0E0E0] leading-[34px] ps-4'
               >
                 {student.name.replace(/[a-z]+$/g, '.')}
-              </td>
+              </th>
             ))}
           </tr>
         </thead>

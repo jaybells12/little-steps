@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useBoolean } from "@/hooks/useBoolean";
-import { MenuItem } from "./MenuItem";
+import { useBoolean } from '@/hooks/useBoolean';
+import { MenuItem } from './MenuItem';
 import {
   DashboardIcon,
   TrackingIcon,
@@ -9,27 +9,27 @@ import {
   RightArrowIcon,
   StudentIcon,
   PlanningIcon,
-} from "@/components/Icons";
+} from '@/components/Icons';
 
 const items = [
   {
-    text: "Dashboard",
+    text: 'Dashboard',
     icon: DashboardIcon,
   },
   {
-    text: "Progress Tracker",
+    text: 'Progress Tracker',
     icon: TrackingIcon,
   },
   {
-    text: "Lesson Planner",
+    text: 'Lesson Planner',
     icon: PlanningIcon,
   },
   {
-    text: "My Class",
+    text: 'My Class',
     icon: StudentIcon,
   },
   {
-    text: "Lessons",
+    text: 'Lessons',
     icon: LessonIcon,
   },
 ];
@@ -37,7 +37,7 @@ const items = [
 export const Menu = () => {
   const [isOpen, setIsOpen] = useBoolean();
 
-  const containerWidth = isOpen ? "w-56" : "w-14";
+  const containerWidth = isOpen ? 'w-56' : 'w-14';
 
   const handleClick = () => {
     if (isOpen) {
@@ -48,14 +48,16 @@ export const Menu = () => {
   };
 
   return (
-    <nav className={`rounded-t-lg bg-accent h-screen ${containerWidth}`}>
+    <nav
+      className={`rounded-t-lg bg-accent fixed h-full ${containerWidth} top-[57.3px]`}
+    >
       <ul className={`flex flex-col gap-8  px-1 pt-1 items-center`}>
         <li
           className={`w-full relative h-12 rounded-md flex items-center text-primary hover:text-accent  hover:bg-primary`}
           onClick={handleClick}
         >
           <RightArrowIcon
-            className={`w-6 h-6 ml-3 ${isOpen && "rotate-180"}`}
+            className={`w-6 h-6 ml-3 ${isOpen && 'rotate-180'}`}
           />
         </li>
         {items.map((item, idx) => (

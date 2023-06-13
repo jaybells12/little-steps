@@ -11,13 +11,15 @@ export default function HomePage(props: any) {
   }));
 
   return (
-    <section className={'bg-map'}>
+    <section className={'bg-map bg-cover'}>
       <Nav />
-      <Menu />
-      <ProgressTable
-        lessonGroups={lessonData}
-        students={students}
-      />
+      <div className={'flex'}>
+        <Menu />
+        <ProgressTable
+          lessonGroups={lessonData}
+          students={students}
+        />
+      </div>
     </section>
   );
 }

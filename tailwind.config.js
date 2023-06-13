@@ -37,6 +37,9 @@ module.exports = {
           "radial-gradient(circle at 32%, rgba(255,255,255,0)30%, rgb(255, 255, 255)45%),url('/bg_sign-in.png')",
         map: "url('/bg_cartography.png')",
       },
+      backgroundSize: {
+        nav: 'calc(max(100%, 1165px))',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
