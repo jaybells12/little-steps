@@ -1,19 +1,25 @@
-import { LessonRow } from './LessonRow';
+import { useMemo } from 'react'
+import { LessonRow } from './LessonRow'
 
 type LessonGroupProps = {
-  name: string;
-  lessons: Lesson[];
-  students: Students;
-};
+  name: string
+  lessons: Lesson[]
+  students: Students
+}
 
 export const LessonGroup = ({ name, lessons, students }: LessonGroupProps) => {
-  const blankCells = Array.from({ length: students.length }, () => (
-    <td
-      className={
-        'bg-[#daf4ef] border-y border-[#E0E0E0] last:border-r [&:nth-child(2)]:border-l'
-      }
-    ></td>
-  ));
+  const blankCells = useMemo(
+    () =>
+      Array.from({ length: students.length }, (_, idx) => (
+        <td
+          key={idx}
+          className={
+            'bg-[#daf4ef] border-y border-[#E0E0E0] last:border-r [&:nth-child(2)]:border-l'
+          }
+        />
+      )),
+    [students]
+  )
 
   return (
     <>
@@ -39,5 +45,5 @@ export const LessonGroup = ({ name, lessons, students }: LessonGroupProps) => {
         />
       ))}
     </>
-  );
-};
+  )
+}
