@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "01",
+    "username": "James",
+    "role": "admin",
+    "password": "password01"
+  },
+  {
+    "_id": "02",
+    "username": "Kovu",
+    "role": "director",
+    "password": "password02"
+  },
+  {
+    "_id": "03",
+    "username": "Claire",
+    "role": "guide",
+    "password": "password03"
+  },
+  {
+    "_id": "04",
+    "username": "Tom",
+    "role": "parent",
+    "password": "password04"
+  }
+]
