@@ -6,6 +6,7 @@ export type FormInputProps = {
   value: string | number
   type: 'text' | 'email' | 'password'
   onChange: (e: ChangeEvent) => void
+  required?: boolean
 }
 
 export default function FormInput({
@@ -14,6 +15,7 @@ export default function FormInput({
   value,
   onChange,
   type,
+  required = false,
 }: FormInputProps) {
   return (
     <label htmlFor={name}>
@@ -24,6 +26,7 @@ export default function FormInput({
         type={type}
         value={value}
         onChange={onChange}
+        required={required}
       />
     </label>
   )
