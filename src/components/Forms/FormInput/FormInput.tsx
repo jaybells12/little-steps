@@ -5,7 +5,7 @@ export type FormInputProps = {
   label: string
   value: string | number
   type: 'text' | 'email' | 'password'
-  onChange: (e: ChangeEvent) => void
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void
   required?: boolean
 }
 
