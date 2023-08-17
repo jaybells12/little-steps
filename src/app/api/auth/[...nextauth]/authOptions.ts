@@ -1,8 +1,8 @@
-import type { Awaitable, NextAuthOptions, User } from 'next-auth'
+import type { NextAuthOptions } from 'next-auth'
 import usersData from '../../../../data/users.json'
 import CredentialsProvider from 'next-auth/providers/credentials'
 
-export const options: NextAuthOptions = {
+export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       name: 'Credentials',

@@ -1,16 +1,15 @@
-'use client';
+'use client'
 
-import { Button } from '../Button';
-import Image from 'next/image';
-import { UserBlock } from './UserBlock';
-import { useContext } from 'react';
-import { AuthContext } from '@/AuthProvider';
+import { Button } from '../Button'
+import Image from 'next/image'
+import { UserBlock } from './UserBlock'
 
-export type NavProps = {};
+export type NavProps = {}
+
+// Change this
+const isAuth = true
 
 export const Nav = () => {
-  const isAuth = useContext(AuthContext);
-
   return (
     <nav
       className={
@@ -43,5 +42,5 @@ export const Nav = () => {
         />
       )}
     </nav>
-  );
-};
+  )
+}
