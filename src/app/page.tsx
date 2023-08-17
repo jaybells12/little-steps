@@ -9,7 +9,7 @@ export default function LandingPage() {
         'h-screen w-full bg-landing bg-[size:1200px_800px] bg-[position:center_-50px] bg-no-repeat'
       }
     >
-      <Nav />
+      {/* <Nav /> */}
       <CardShell
         title='Welcome to Little Steps!'
         className={'w-80 relative top-[41.5%]'}

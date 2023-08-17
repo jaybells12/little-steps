@@ -4,7 +4,12 @@ export type CardShellProps = {
   title: string
   className?: string
 }
-
+/**
+ * Wraps children in a card with a title
+ * @param title The title of the card
+ * @param className Additional styling
+ * @returns
+ */
 export default function CardShell({
   title,
   className,

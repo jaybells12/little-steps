@@ -12,7 +12,7 @@ export default function Nav() {
   return (
     <nav
       className={
-        'flex justify-between px-6 py-1 border-b border-b-accent border-opacity-25 fixed bg-map bg-nav w-full'
+        'flex justify-between px-6 py-1 border-b border-b-accent border-opacity-25 sticky top-0 bg-map bg-nav w-full'
       }
     >
       <div className={'flex items-center gap-2'}>
