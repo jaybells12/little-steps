@@ -1,13 +1,13 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export type ButtonProps = {
-  text: string;
-  link: string;
-  className?: string;
-};
+  text: string
+  link: string
+  className?: string
+}
 
-export const Button = (props: ButtonProps) => {
-  const { text, link, className } = props;
+export default function Button(props: ButtonProps) {
+  const { text, link, className } = props
   return (
     <Link
       href={link}
@@ -15,5 +15,5 @@ export const Button = (props: ButtonProps) => {
     >
       {text}
     </Link>
-  );
-};
+  )
+}

@@ -1,14 +1,14 @@
-import { LessonGroup } from './LessonGroup';
+import LessonGroup from './LessonGroup'
 
 type ProgressTableProps = {
-  lessonGroups: LessonGroups;
-  students: Students;
-};
+  lessonGroups: LessonGroups
+  students: Students
+}
 
-export const ProgressTable = ({
+export default function ProgressTable({
   lessonGroups,
   students,
-}: ProgressTableProps) => {
+}: ProgressTableProps) {
   return (
     <article
       className={
@@ -43,5 +43,5 @@ export const ProgressTable = ({
         </tbody>
       </table>
     </article>
-  );
-};
+  )
+}

@@ -1,15 +1,13 @@
-'use client';
+'use client'
 
-import { Button } from '../Button';
-import Image from 'next/image';
-import { UserBlock } from './UserBlock';
-import { useContext } from 'react';
-import { AuthContext } from '@/AuthProvider';
+import Button from '@/components/Button'
+import Image from 'next/image'
+import UserBlock from './UserBlock'
 
-export type NavProps = {};
+export type NavProps = {}
 
-export const Nav = () => {
-  const isAuth = useContext(AuthContext);
+export default function Nav() {
+  const isAuth = true
 
   return (
     <nav
@@ -43,5 +41,5 @@ export const Nav = () => {
         />
       )}
     </nav>
-  );
-};
+  )
+}

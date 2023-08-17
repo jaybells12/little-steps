@@ -1,1 +1,1 @@
-export * from "./UserBlock"
+export { default } from './UserBlock'
