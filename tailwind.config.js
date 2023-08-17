@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 
-import defaultTheme from 'tailwindcss/defaultTheme';
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 module.exports = {
   content: [
@@ -40,8 +40,11 @@ module.exports = {
       backgroundSize: {
         nav: 'calc(max(100%, 1165px))',
       },
+      backgroundPosition: {
+        nav: '0 147px',
+      },
     },
   },
   plugins: [require('@tailwindcss/forms')],
-};
+}
 
