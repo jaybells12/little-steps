@@ -1,45 +1,87 @@
 'use client'
 
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useReducer, useState } from 'react'
 import FormInput from '../FormInput/FormInput'
 
+function reducer(state: UserFormState, action: UserFormPayload) {
+  switch (action.type) {
+    case 'first':
+      return {
+        ...state,
+        first: action.payload,
+      }
+    case 'last':
+      return {
+        ...state,
+        last: action.payload,
+      }
+    case 'email':
+      return {
+        ...state,
+        email: action.payload,
+      }
+    default:
+      throw Error(`Unknown Form Action: ${action.type}`)
+  }
+}
+
 export default function UserForm() {
-  const [first, setFirst] = useState('')
-  const [last, setLast] = useState('')
-  const [email, setEmail] = useState('')
+  const [formState, dispatch] = useReducer(reducer, {
+    first: {
+      value: '',
+      isError: false,
+    },
+    last: {
+      value: '',
+      isError: false,
+    },
+    email: {
+      value: '',
+      isError: false,
+    },
+  })
+
+  const handleInput = (e: ChangeEvent<HTMLInputElement>) => {
+    const { id: field, value } = e.target
+
+    dispatch({ type: field, payload: { value, isError: !!!value } })
+  }
 
   return (
     <form
-      onSubmit={() => console.log('Form submitted: ', { first, last, email })}
+      onSubmit={(e) => {
+        e.preventDefault()
+        console.log('Form submitted: ', formState)
+      }}
     >
       <FormInput
+        required
         label={'First Name'}
         name={'first'}
         type={'text'}
-        value={first}
-        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          setFirst(e.target.value)
-        }
-        required
+        value={formState.first.value}
+        isError={formState.first.isError}
+        onChange={handleInput}
       />
       <FormInput
+        required
         label={'Last Name'}
         name={'last'}
         type={'text'}
-        value={last}
-        onChange={(e: ChangeEvent<HTMLInputElement>) => setLast(e.target.value)}
-        required
+        value={formState.last.value}
+        isError={formState.last.isError}
+        onChange={handleInput}
       />
       <FormInput
+        required
         label={'Email'}
         name={'email'}
         type={'email'}
-        value={email}
-        onChange={(e: ChangeEvent<HTMLInputElement>) =>
-          setEmail(e.target.value)
-        }
-        required
+        value={formState.email.value}
+        isError={formState.email.isError}
+        onChange={handleInput}
       />
+      <button>Submit</button>
     </form>
   )
 }
