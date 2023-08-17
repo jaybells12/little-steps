@@ -1,6 +1,6 @@
-import { CardShell } from '@/components/CardShell';
-import { Button } from '@/components/Button';
-import { Nav } from '@/components/Nav';
+import CardShell from '@/components/CardShell'
+import Button from '@/components/Button'
+import Nav from '@/components/Nav'
 
 export default function LandingPage() {
   return (
@@ -27,6 +27,6 @@ export default function LandingPage() {
         />
       </CardShell>
     </main>
-  );
+  )
 }
 
