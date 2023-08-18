@@ -1,6 +1,6 @@
-import { Nav } from '@/components/Nav';
-import { CardShell } from '@/components/CardShell';
-import { Login } from '@/components/Login';
+import Nav from '@/components/Nav'
+import CardShell from '@/components/CardShell'
+import Login from '@/components/Login'
 
 export default function LoginPage(props: any) {
   return (
@@ -17,5 +17,5 @@ export default function LoginPage(props: any) {
         <Login />
       </CardShell>
     </main>
-  );
+  )
 }
