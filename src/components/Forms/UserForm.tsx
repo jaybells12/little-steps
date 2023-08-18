@@ -1,7 +1,7 @@
 'use client'
 
 import { ChangeEvent, useReducer } from 'react'
-import FormInput from '../FormInput'
+import FormInput from './FormInput'
 
 function reducer(state: UserFormState, action: UserFormPayload) {
   switch (action.type) {
