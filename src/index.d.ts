@@ -1,19 +1,19 @@
 type Student = {
-  _id: string,
-  name: string,
+  _id: string
+  name: string
   progress: Map<string, string>
 }
 
 type Lesson = {
-  _id: string,
-  name: string,
+  _id: string
+  name: string
 }
 
 type LessonGroup = {
-  _id: string,
-  name: string,
-  lessons: lesson[],
+  _id: string
+  name: string
+  lessons: lesson[]
 }
 
-type LessonGroups = LessonGroup[];
-type Students = student[];
+type LessonGroups = LessonGroup[]
+type Students = student[]
