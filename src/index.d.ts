@@ -17,3 +17,5 @@ type LessonGroup = {
 
 type LessonGroups = LessonGroup[]
 type Students = student[]
+
+type LessonStatusFlags = 'I' | 'M' | 'N' | 'P'
