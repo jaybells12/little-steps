@@ -35,6 +35,7 @@ const schoolSchema = new mongoose.Schema<ISchool>(
       required: [true, 'Please provide a hashcode for the school'],
       minlength: [6, 'School hashcode must be 6 characters in length'],
       maxlength: [6, 'School hashcode must be 6 characters in length'],
+      unique: true,
       immutable: true,
     },
     // The Directors and Guides employed by the school
@@ -46,10 +47,7 @@ const schoolSchema = new mongoose.Schema<ISchool>(
           // populate: {
           //   select: 'name _id',
           // },
-          required: [
-            true,
-            'Please provide at least one director for the school',
-          ],
+          required: [true, 'Please provide at least one director for the school'],
         },
       ],
       guides: [

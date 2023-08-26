@@ -1,0 +1,3 @@
+/**
+ * VIEW A GUIDE PAGE
+ */

@@ -1,0 +1,3 @@
+/**
+ * VIEW A SCHOOL PAGE
+ */

@@ -1,5 +1,5 @@
 /**
- * Generates a short hash
+ * Generates a short hash code
  * @param size The length of the hash
  * @returns Hash string
  */
