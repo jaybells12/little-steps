@@ -4,16 +4,6 @@ mongoose.Schema.Types.String.set('trim', true)
 // should return false for empty strings
 mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))
 
-interface IParent {
-  school: string
-  name: {
-    first: string
-    last: string
-  }
-  email: string
-  children: [mongoose.Schema.Types.ObjectId]
-}
-
 // Current Fields returned by populate: Name, Email, Children
 // Fields not returned by populate: School
 

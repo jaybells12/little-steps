@@ -1,15 +1,5 @@
 import mongoose from 'mongoose'
 
-interface IGuide {
-  school: string
-  name: {
-    first: string
-    last: string
-  }
-  email: string
-  classroom: mongoose.Schema.Types.ObjectId
-}
-
 mongoose.Schema.Types.String.set('trim', true)
 // should return false for empty strings
 mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))

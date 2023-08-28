@@ -1,11 +1,5 @@
 import mongoose from 'mongoose'
 
-interface ILesson {
-  name: string
-  primary: string
-  secondary: string
-}
-
 mongoose.Schema.Types.String.set('trim', true)
 // should return false for empty strings
 mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))

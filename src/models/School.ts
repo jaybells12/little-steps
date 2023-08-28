@@ -1,19 +1,5 @@
 import mongoose from 'mongoose'
 
-interface ISchool {
-  name: string
-  hashcode: string
-  employees: {
-    directors: [mongoose.Schema.Types.ObjectId]
-    guides: [mongoose.Schema.Types.ObjectId]
-  }
-  clients: {
-    students: [mongoose.Schema.Types.ObjectId]
-    parents: [mongoose.Schema.Types.ObjectId]
-  }
-  classrooms: [mongoose.Schema.Types.ObjectId]
-}
-
 mongoose.Schema.Types.String.set('trim', true)
 // should return false for empty strings
 mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))
