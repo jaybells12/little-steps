@@ -20,6 +20,9 @@ type Students = student[]
 
 type LessonStatusFlags = 'I' | 'M' | 'N' | 'P'
 
+// Database Types
+type DBMethods = 'GET' | 'POST' | 'PUT' | 'DELETE'
+
 // Model Interfaces
 interface IAdmin {
   name: string
