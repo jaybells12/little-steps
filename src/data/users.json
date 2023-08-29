@@ -1,26 +1,30 @@
 [
   {
     "id": "01",
-    "username": "James",
-    "role": "admin",
+    "email": "James@dev.com",
+    "role": 1111,
+    "school": "123abc",
     "password": "password01"
   },
   {
     "id": "02",
-    "username": "Kovu",
-    "role": "director",
+    "email": "Kovu@dev.com",
+    "role": 2222,
+    "school": "123abc",
     "password": "password02"
   },
   {
     "id": "03",
-    "username": "Claire",
-    "role": "guide",
+    "email": "Claire@dev.com",
+    "role": 3333,
+    "school": "123abc",
     "password": "password03"
   },
   {
     "id": "04",
-    "username": "Tom",
-    "role": "parent",
+    "email": "Tom@dev.com",
+    "role": 4444,
+    "school": "123abc",
     "password": "password04"
   }
 ]
