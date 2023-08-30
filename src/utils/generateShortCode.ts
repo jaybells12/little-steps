@@ -3,7 +3,7 @@
  * @param size The length of the hash
  * @returns Hash string
  */
-export default function hashID(size: number) {
+export default function generateHash(size: number) {
   const MASK = 0x3d
   const LETTERS = 'abcdefghijklmnopqrstuvwxyz'
   const NUMBERS = '1234567890'
