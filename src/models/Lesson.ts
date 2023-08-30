@@ -10,6 +10,7 @@ const lessonSchema = new mongoose.Schema<ILesson>({
     required: [true, 'Please provide a name for the lesson'],
     minlength: [2, 'Lesson name cannot be less than 2 characters'],
     maxlength: [60, 'Lesson name cannot be more than 60 characters'],
+    unique: true,
   },
   primary: {
     type: String,

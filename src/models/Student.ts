@@ -1,5 +1,7 @@
 import mongoose from 'mongoose'
 
+const LESSON_FLAGS = ['I', 'P', 'N', 'M']
+
 mongoose.Schema.Types.String.set('trim', true)
 // should return false for empty strings
 mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))
@@ -79,7 +81,12 @@ const studentSchema = new mongoose.Schema<IStudent>(
         ref: 'Classroom',
       },
     ],
-    // The Lessons of the student
+    // The Lessons of the student (how to structure? Probably a map of enum value)
+    progress: {
+      type: Map,
+      of: String,
+      enum: LESSON_FLAGS,
+    },
   },
   {
     timestamps: true,
