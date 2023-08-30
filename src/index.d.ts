@@ -24,6 +24,18 @@ type LessonStatusFlags = 'I' | 'M' | 'N' | 'P'
 type DBMethods = 'GET' | 'POST' | 'PUT' | 'DELETE'
 
 // Model Interfaces
+interface IUser {
+  school: string
+  email: string
+  name: {
+    first: string
+    last: string
+  }
+  password: string
+  role: number
+  // school: string
+}
+
 interface IAdmin {
   name: string
   password: string
@@ -33,6 +45,7 @@ interface IClassroom {
   school: string
   guide: mongoose.Schema.Types.ObjectId
   students: [mongoose.Schema.Types.ObjectId]
+  curriculum: [mongoose.Schema.Types.ObjectId]
 }
 
 interface IDirector {
@@ -44,15 +57,15 @@ interface IDirector {
   email: string
 }
 
-interface IGuide {
-  school: string
-  name: {
-    first: string
-    last: string
-  }
-  email: string
-  classroom: mongoose.Schema.Types.ObjectId
-}
+// interface IGuide {
+//   school: string
+//   name: {
+//     first: string
+//     last: string
+//   }
+//   email: string
+//   classroom: mongoose.Schema.Types.ObjectId
+// }
 
 interface ILesson {
   name: string
@@ -60,15 +73,15 @@ interface ILesson {
   secondary: string
 }
 
-interface IParent {
-  school: string
-  name: {
-    first: string
-    last: string
-  }
-  email: string
-  children: [mongoose.Schema.Types.ObjectId]
-}
+// interface IParent {
+//   school: string
+//   name: {
+//     first: string
+//     last: string
+//   }
+//   email: string
+//   children: [mongoose.Schema.Types.ObjectId]
+// }
 
 interface ISchool {
   name: string
@@ -101,10 +114,7 @@ interface IStudent {
     parents: [mongoose.Schema.Types.ObjectId]
   }
   classroom: mongoose.Schema.Types.ObjectId
-  lessons: [
-    {
-      lesson: mongoose.Schema.Types.ObjectId
-      status: LessonStatusFlags
-    }
-  ]
+  progress: {
+    [index: string]: LessonStatusFlags
+  }
 }
