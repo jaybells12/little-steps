@@ -1,1 +1,1 @@
-export * from "./LessonRow"
+export { default } from './LessonRow'

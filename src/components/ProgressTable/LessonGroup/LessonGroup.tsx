@@ -1,5 +1,5 @@
+import LessonRow from './LessonRow'
 import { useMemo } from 'react'
-import { LessonRow } from './LessonRow'
 
 type LessonGroupProps = {
   name: string
@@ -7,7 +7,11 @@ type LessonGroupProps = {
   students: Students
 }
 
-export const LessonGroup = ({ name, lessons, students }: LessonGroupProps) => {
+export default function LessonGroup({
+  name,
+  lessons,
+  students,
+}: LessonGroupProps) {
   const blankCells = useMemo(
     () =>
       Array.from({ length: students.length }, (_, idx) => (

@@ -1,16 +1,16 @@
 type LessonRowProps = {
-  lesson: Lesson;
-  students: Students;
-};
+  lesson: Lesson
+  students: Students
+}
 
-export const LessonRow = ({ lesson, students }: LessonRowProps) => {
+export default function LessonRow({ lesson, students }: LessonRowProps) {
   return (
     <tr>
       <td className={'px-8 border-y border-r border-[#E0E0E0]'}>
         {lesson.name}
       </td>
       {students.map((student, index) => {
-        const value = student.progress.get(lesson._id) || '';
+        const value = student.progress.get(lesson._id) || ''
         return (
           <td
             key={index}
@@ -25,8 +25,8 @@ export const LessonRow = ({ lesson, students }: LessonRowProps) => {
               {value}
             </div>
           </td>
-        );
+        )
       })}
     </tr>
-  );
-};
+  )
+}

@@ -1,30 +1,23 @@
 'use client'
 
-import { Button } from '../Button'
+import Button from '@/components/Button'
 import Image from 'next/image'
-import { UserBlock } from './UserBlock'
+import UserBlock from './UserBlock'
 
 export type NavProps = {}
 
-// Change this
-const isAuth = true
+export default function Nav() {
+  const isAuth = true
 
-export const Nav = () => {
   return (
-    <nav
-      className={
-        'flex justify-between px-6 py-1 border-b border-b-accent border-opacity-25 fixed bg-map bg-nav w-full'
-      }
-    >
+    <nav className={'flex justify-between px-6 py-1 border-b border-b-accent border-opacity-25 sticky top-0 bg-map bg-nav w-full'}>
       <div className={'flex items-center gap-2'}>
         <Image
           src={'/icons_nav_books.png'}
           alt={'Books'}
           height={50}
           width={50}
-          className={
-            'px-1 py-1.5 border-2 border-accent rounded-lg block grow-0 shrink-0'
-          }
+          className={'px-1 py-1.5 border-2 border-accent rounded-lg block grow-0 shrink-0'}
         />
         <p>Little Steps</p>
       </div>

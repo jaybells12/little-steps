@@ -1,7 +1,7 @@
-'use client';
+'use client'
 
-import { useBoolean } from '@/hooks/useBoolean';
-import { MenuItem } from './MenuItem';
+import MenuItem from './MenuItem'
+import { useBoolean } from '@/hooks/useBoolean'
 import {
   DashboardIcon,
   TrackingIcon,
@@ -9,7 +9,7 @@ import {
   RightArrowIcon,
   StudentIcon,
   PlanningIcon,
-} from '@/components/Icons';
+} from '@/components/Icons'
 
 const items = [
   {
@@ -32,20 +32,20 @@ const items = [
     text: 'Lessons',
     icon: LessonIcon,
   },
-];
+]
 
-export const Menu = () => {
-  const [isOpen, setIsOpen] = useBoolean();
+export default function Menu() {
+  const [isOpen, setIsOpen] = useBoolean()
 
-  const containerWidth = isOpen ? 'w-56' : 'w-14';
+  const containerWidth = isOpen ? 'w-56' : 'w-14'
 
   const handleClick = () => {
     if (isOpen) {
-      setIsOpen.off();
+      setIsOpen.off()
     } else {
-      setIsOpen.on();
+      setIsOpen.on()
     }
-  };
+  }
 
   return (
     <nav
@@ -70,5 +70,5 @@ export const Menu = () => {
         ))}
       </ul>
     </nav>
-  );
-};
+  )
+}

@@ -1,4 +1,5 @@
 import NextAuthProvider from '../NextAuthProvider'
+import Nav from '@/components/Nav'
 import './globals.css'
 import { Poppins } from 'next/font/google'
 
@@ -13,11 +14,7 @@ export const metadata = {
   description: 'Montessouri Lesson Planning and Student Tracking',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang='en'>
       <body className={`${poppins.className} font-sans`}>
@@ -26,4 +23,3 @@ export default function RootLayout({
     </html>
   )
 }
-

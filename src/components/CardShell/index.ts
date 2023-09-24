@@ -1,1 +1,1 @@
-export * from "./CardShell"
+export { default } from './CardShell'
