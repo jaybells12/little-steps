@@ -6,6 +6,16 @@ All database actions need to be restricted to specific school based on a criteri
 
 ## Remove vestigial models []
 
+## Consider Curriculum Model/Routing []
+
+    Curriculum is a guide specific container of lessons. does it need to be its own database entry? this could be manufactured by storing a guides array in a curriculum field on lessons
+
+    It seems i resolved this by storing an array of lessons to a curriculum field to the classroom, so now it is classroom specific instead of guide specific
+
+## User Model []
+
+    Add virtuals to get users by school code and by role?
+
 ## Revamp Lessons Model [X]
 
     Lessons data needs to be individualized, ie each guide can have their own specific lesson plan.

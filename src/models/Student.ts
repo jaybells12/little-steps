@@ -6,9 +6,6 @@ mongoose.Schema.Types.String.set('trim', true)
 // should return false for empty strings
 mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))
 
-// Current Fields returned by populate: Name, Details, Parents, Classroom
-// Fields not returned by populate: School
-
 const studentSchema = new mongoose.Schema<IStudent>(
   {
     // The School hashcode of the student

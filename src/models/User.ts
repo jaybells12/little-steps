@@ -11,14 +11,14 @@ mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))
 
 const userSchema = new mongoose.Schema<IUser>(
   {
-    // The school hash code of the user
+    // The School hash code of the user
     school: {
       type: String,
       required: [true, 'Please provide a school hashcode'],
       minlength: [6, 'School hashcode must be 6 characters in length'],
       maxlength: [6, 'School hashcode must be 6 characters in length'],
     },
-    // The full name of the user
+    // The Name of the user
     name: {
       first: {
         type: String,
@@ -33,7 +33,7 @@ const userSchema = new mongoose.Schema<IUser>(
         maxlength: [30, 'Last name cannot be more than 30 characters'],
       },
     },
-    // The email address of the user
+    // The Email address of the user
     email: {
       type: String,
       required: [true, 'Please provide an email address for the user'],
