@@ -1,7 +1,8 @@
-import { Nav } from '@/components/Nav';
-import { CardShell } from '@/components/CardShell';
-import { Login } from '@/components/Login';
+import { Nav } from '@/components/Nav'
+import { CardShell } from '@/components/CardShell'
+import { Login } from '@/components/Login'
 
+// Create a layout with Main and Nav ?
 export default function LoginPage(props: any) {
   return (
     <main
@@ -17,5 +18,5 @@ export default function LoginPage(props: any) {
         <Login />
       </CardShell>
     </main>
-  );
+  )
 }
