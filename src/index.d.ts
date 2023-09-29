@@ -20,6 +20,9 @@ type Students = student[]
 
 type LessonStatusFlags = 'I' | 'M' | 'N' | 'P'
 
+//Form Types
+type FormTypes = 'classroom' | 'lesson' | 'school' | 'student' | 'user'
+
 // Database Types
 type DBMethods = 'GET' | 'POST' | 'PUT' | 'DELETE'
 
@@ -33,55 +36,21 @@ interface IUser {
   }
   password: string
   role: number
-  // school: string
-}
-
-interface IAdmin {
-  name: string
-  password: string
 }
 
 interface IClassroom {
+  name: string
   school: string
   guide: mongoose.Schema.Types.ObjectId
   students: [mongoose.Schema.Types.ObjectId]
   curriculum: [mongoose.Schema.Types.ObjectId]
 }
 
-interface IDirector {
-  school: string
-  name: {
-    first: string
-    last: string
-  }
-  email: string
-}
-
-// interface IGuide {
-//   school: string
-//   name: {
-//     first: string
-//     last: string
-//   }
-//   email: string
-//   classroom: mongoose.Schema.Types.ObjectId
-// }
-
 interface ILesson {
-  name: string
+  title: string
   primary: string
   secondary: string
 }
-
-// interface IParent {
-//   school: string
-//   name: {
-//     first: string
-//     last: string
-//   }
-//   email: string
-//   children: [mongoose.Schema.Types.ObjectId]
-// }
 
 interface ISchool {
   name: string
