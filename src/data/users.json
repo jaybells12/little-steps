@@ -1,30 +1,66 @@
 [
   {
     "id": "01",
+    "school": "000000",
+    "fullName": "James Bellomy",
     "email": "James@dev.com",
-    "role": 1111,
-    "school": "123abc",
-    "password": "password01"
+    "password": "password01",
+    "role": 1106
   },
   {
     "id": "02",
+    "school": "111111",
+    "fullName": "Kovu Bellomy",
     "email": "Kovu@dev.com",
-    "role": 2222,
-    "school": "123abc",
-    "password": "password02"
+    "password": "password02",
+    "role": 3013
   },
   {
     "id": "03",
+    "school": "111111",
+    "fullName": "Claire Bellomy",
     "email": "Claire@dev.com",
-    "role": 3333,
-    "school": "123abc",
-    "password": "password03"
+    "password": "password03",
+    "role": 1908
   },
   {
     "id": "04",
+    "school": "111111",
+    "fullName": "Tom Cook",
     "email": "Tom@dev.com",
-    "role": 4444,
-    "school": "123abc",
-    "password": "password04"
+    "password": "password04",
+    "role": 8008
+  },
+  {
+    "id": "05",
+    "school": "000000",
+    "fullName": "James Bellomy2",
+    "email": "James2@dev.com",
+    "password": "password01",
+    "role": 1106
+  },
+  {
+    "id": "06",
+    "school": "222222",
+    "fullName": "Kovu Bellomy2",
+    "email": "Kovu2@dev.com",
+    "password": "password02",
+    "role": 3013
+  },
+  {
+    "id": "07",
+    "school": "222222",
+    "fullName": "Claire Bellomy2",
+    "email": "Claire2@dev.com",
+    "password": "password03",
+    "role": 1908
+  },
+  {
+    "id": "08",
+    "school": "222222",
+    "fullName": "Tom Cook2",
+    "email": "Tom2@dev.com",
+    "password": "password04",
+    "role": 8008
   }
 ]

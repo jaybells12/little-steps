@@ -1,0 +1,28 @@
+[
+  {
+    "name": "First School",
+    "hashcode": "111111",
+    "employees": {
+      "directors": ["02"],
+      "guides": ["03"]
+    },
+    "clients": {
+      "students": ["01", "02"],
+      "parents": ["04"]
+    },
+    "classrooms": ["01", "02"]
+  },
+  {
+    "name": "Second School",
+    "hashcode": "222222",
+    "employees": {
+      "directors": ["06"],
+      "guides": ["07"]
+    },
+    "clients": {
+      "students": ["03", "04", "05"],
+      "parents": ["08"]
+    },
+    "classrooms": ["03", "04"]
+  }
+]

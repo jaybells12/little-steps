@@ -1,0 +1,34 @@
+[
+  {
+    "id": "01",
+    "school": "111111",
+    "name": "Butterfly",
+    "guide": "03",
+    "students": ["01"],
+    "curriculum": ["01", "04", "05"]
+  },
+  {
+    "id": "02",
+    "school": "111111",
+    "name": "Mariposa",
+    "guide": "03",
+    "students": ["02"],
+    "curriculum": ["02", "03", "05"]
+  },
+  {
+    "id": "03",
+    "school": "222222",
+    "name": "Papillion",
+    "guide": "07",
+    "students": ["03"],
+    "curriculum": ["01", "02", "03"]
+  },
+  {
+    "id": "04",
+    "school": "222222",
+    "name": "Schmetterling",
+    "guide": "07",
+    "students": ["04","05"],
+    "curriculum": ["03", "04", "05"]
+  }
+]

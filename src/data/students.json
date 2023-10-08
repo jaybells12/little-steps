@@ -1,72 +1,117 @@
 [
   {
-    "_id": "01",
-    "name": "James Bell",
+    "id": "01",
+    "school": "111111",
+    "fullName": "James Bell",
+    "details": {
+      "birthday": "11/06/1985",
+      "address": {
+        "street": "1510 s melrose dr apt 116",
+        "city": "vista",
+        "state": "ca",
+        "zipcode": 12345
+      },
+      "parents": ["04"]
+    },
+    "classroom": ["01"],
     "progress": {
       "01": "m",
       "02": "m",
-      "05": "w",
-      "06": "w",
-      "07": "p",
-      "08": "p",
-      "09": "p",
-      "11": "m"
+      "03": "w",
+      "04": "w",
+      "05": "p"
     }
   },
   {
-    "_id": "02",
-    "name": "Yannick Polish",
+    "id": "02",
+    "school": "111111",
+    "fullName": "Yannick Polish",
+    "details": {
+      "birthday": "08/12/1988",
+      "address": {
+        "street": "226 sheldon st apt 3",
+        "city": "el segundo",
+        "state": "ca",
+        "zipcode": 54321
+      },
+      "parents": ["04"]
+    },
+    "classroom": ["02"],
     "progress": {
       "01": "m",
       "02": "w",
-      "05": "i",
-      "06": "w",
-      "07": "p",
-      "08": "i",
-      "09": "p",
-      "11": "m"
+      "03": "i",
+      "04": "w",
+      "05": "p"
     }
   },
   {
-    "_id": "03",
-    "name": "Elsa Polish",
+    "id": "03",
+    "school": "222222",
+    "fullName": "Elsa Polish",
+    "details": {
+      "birthday": "02/15/1987",
+      "address": {
+        "street": "11562 coral hills dr",
+        "city": "dallas",
+        "state": "ca",
+        "zipcode": 15243
+      },
+      "parents": ["08"]
+    },
+    "classroom": ["03"],
     "progress": {
       "01": "w",
       "02": "w",
-      "05": "p",
-      "06": "m",
-      "07": "p",
-      "08": "i",
-      "09": "p",
-      "11": "m"
+      "03": "p",
+      "04": "m",
+      "05": "p"
     }
   },
   {
-    "_id": "04",
-    "name": "Abygael Holland",
+    "id": "04",
+    "school": "222222",
+    "fullName": "Abygael Holland",
+    "details": {
+      "birthday": "05/12/2008",
+      "address": {
+        "street": "123 fake st",
+        "city": "nearly",
+        "state": "ca",
+        "zipcode": 51423
+      },
+      "parents": ["08"]
+    },
+    "classroom": ["04"],
     "progress": {
       "01": "m",
       "02": "w",
-      "05": "p",
-      "06": "i",
-      "07": "p",
-      "08": "w",
-      "09": "w",
-      "11": "m"
+      "03": "p",
+      "04": "i",
+      "05": "p"
     }
   },
   {
-    "_id": "05",
-    "name": "Lorelei Chili",
+    "id": "05",
+    "school": "222222",
+    "fullName": "Lorelei Chili",
+    "details": {
+      "birthday": "08/08/2012",
+      "address": {
+        "street": "123 fake st",
+        "city": "nearly",
+        "state": "ca",
+        "zipcode": 12345
+      },
+      "parents": ["08"]
+    },
+    "classroom": ["04"],
     "progress": {
       "01": "m",
       "02": "i",
-      "05": "w",
-      "06": "p",
-      "07": "w",
-      "08": "p",
-      "09": "i",
-      "11": "p"
+      "03": "w",
+      "04": "p",
+      "05": "w"
     }
   }
 ]

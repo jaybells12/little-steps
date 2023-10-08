@@ -1,0 +1,32 @@
+[
+  {
+    "id": "01",
+    "name": "lesson 01",
+    "primary": "sensorial",
+    "secondary": "visual"
+  },
+  {
+    "id": "02",
+    "name": "lesson 02",
+    "primary": "sensorial",
+    "secondary": "touch"
+  },
+  {
+    "id": "03",
+    "name": "lesson 03",
+    "primary": "practical",
+    "secondary": "coordination"
+  },
+  {
+    "id": "04",
+    "name": "lesson 04",
+    "primary": "practical",
+    "secondary": "balance"
+  },
+  {
+    "id": "05",
+    "name": "lesson 05",
+    "primary": "mathematics",
+    "secondary": "arithmetic"
+  }
+]
