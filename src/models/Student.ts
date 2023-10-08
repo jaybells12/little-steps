@@ -71,7 +71,7 @@ const studentSchema = new mongoose.Schema<IStudent>(
         },
       ],
     },
-    // The Classroom of the student
+    // The Classroom of the student -- Why is this an array? is there a reason for a student to have multiple classrooms?
     classroom: [
       {
         type: mongoose.Schema.Types.ObjectId,

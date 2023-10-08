@@ -11,7 +11,7 @@ mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))
 
 const userSchema = new mongoose.Schema<IUser>(
   {
-    // The School hash code of the user
+    // The School hash code of the user -- How to handle this field for admins? Should 
     school: {
       type: String,
       required: [true, 'Please provide a school hashcode'],

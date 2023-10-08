@@ -5,8 +5,8 @@ mongoose.Schema.Types.String.set('trim', true)
 mongoose.Schema.Types.String.set('validation', (v: string) => Boolean(v))
 
 const lessonSchema = new mongoose.Schema<ILesson>({
-  // The Title of the lesson
-  title: {
+  // The Name of the lesson
+  name: {
     type: String,
     required: [true, 'Please provide a title for the lesson'],
     minlength: [2, 'Lesson title cannot be less than 2 characters'],
