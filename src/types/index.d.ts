@@ -3,12 +3,12 @@ type Student = {
   name: string
   progress: Map<string, string>
 }
-
+// Where is this ?
 type Lesson = {
   _id: string
   name: string
 }
-
+// Where is this ?
 type LessonGroup = {
   _id: string
   name: string
@@ -47,7 +47,7 @@ interface IClassroom {
 }
 
 interface ILesson {
-  title: string
+  name: string
   primary: string
   secondary: string
 }
