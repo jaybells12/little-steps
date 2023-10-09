@@ -1,37 +1,32 @@
 /**
  * VIEW ALL SCHOOLS PAGE
- * [ ] This Route should only be accessible to admins
+ * [ ] should only be accessible to admins
+ * [ ] Each school is a card with Img / Name / Hashcode / Director (principal director is 0th position)
+ * [ ] Each card is a link to the school page
  */
 import 'server-only'
 
 import { getSchools } from './actions'
 import Link from 'next/link'
+import SchoolCard from '@/components/SchoolCard'
 
 export default async function SchoolsPage() {
-  // const [schools, setSchools] = useState<ISchool[]>([])
   const schools = await getSchools()
-  // useEffect(() => {
-  //   getSchools().then((results) => setSchools(results))
-  // }, [])
+
+  const schoolComponents = schools.map(({ _id, name, hashcode, image, employees: { directors } }, idx) => {
+    return (
+      <Link key={idx} href={`/schools/${_id}`}>
+        <SchoolCard name={name} image={image} hash={hashcode} directors={directors} abridged />
+      </Link>
+    )
+  })
 
   return (
-    <div>
+    <>
       <Link href={'/home'} style={{ border: '2px solid black', padding: '0.5rem' }}>
         Home
       </Link>
-      {schools.map(({ name, hashcode, classrooms, clients: { students, parents }, employees: { guides, directors } }, idx) => {
-        return (
-          <div key={idx}>
-            <p>{name}</p>
-            <p>{hashcode}</p>
-            <p>{classrooms}</p>
-            <p>{directors}</p>
-            <p>{guides}</p>
-            <p>{students}</p>
-            <p>{parents}</p>
-          </div>
-        )
-      })}
-    </div>
+      <div className={'flex mx-28'}>{schoolComponents}</div>
+    </>
   )
 }
