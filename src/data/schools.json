@@ -1,7 +1,9 @@
 [
   {
+    "_id": "01",
     "name": "First School",
     "hashcode": "111111",
+    "image": "/stock-school_500x333.jpeg",
     "employees": {
       "directors": ["02"],
       "guides": ["03"]
@@ -13,8 +15,10 @@
     "classrooms": ["01", "02"]
   },
   {
+    "_id": "02",
     "name": "Second School",
     "hashcode": "222222",
+    "image": "/stock-school_500x333.jpeg",
     "employees": {
       "directors": ["06"],
       "guides": ["07"]

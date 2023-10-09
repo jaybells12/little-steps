@@ -2,7 +2,7 @@
   {
     "id": "01",
     "school": "000000",
-    "fullName": "James Bellomy",
+    "name": { "first": "james", "last": "bellomy" },
     "email": "James@dev.com",
     "password": "password01",
     "role": 1106
@@ -10,7 +10,7 @@
   {
     "id": "02",
     "school": "111111",
-    "fullName": "Kovu Bellomy",
+    "name": { "first": "kovu", "last": "bellomy" },
     "email": "Kovu@dev.com",
     "password": "password02",
     "role": 3013
@@ -18,7 +18,7 @@
   {
     "id": "03",
     "school": "111111",
-    "fullName": "Claire Bellomy",
+    "name": { "first": "claire", "last": "bellomy" },
     "email": "Claire@dev.com",
     "password": "password03",
     "role": 1908
@@ -26,7 +26,7 @@
   {
     "id": "04",
     "school": "111111",
-    "fullName": "Tom Cook",
+    "name": { "first": "tom", "last": "cook" },
     "email": "Tom@dev.com",
     "password": "password04",
     "role": 8008
@@ -34,32 +34,32 @@
   {
     "id": "05",
     "school": "000000",
-    "fullName": "James Bellomy2",
-    "email": "James2@dev.com",
+    "name": { "first": "jimmy", "last": "bellomy" },
+    "email": "jimmy@dev.com",
     "password": "password01",
     "role": 1106
   },
   {
     "id": "06",
     "school": "222222",
-    "fullName": "Kovu Bellomy2",
-    "email": "Kovu2@dev.com",
+    "name": { "first": "vuko", "last": "bellomy" },
+    "email": "vuko@dev.com",
     "password": "password02",
     "role": 3013
   },
   {
     "id": "07",
     "school": "222222",
-    "fullName": "Claire Bellomy2",
-    "email": "Claire2@dev.com",
+    "name": { "first": "clairette", "last": "bellomy" },
+    "email": "clairette@dev.com",
     "password": "password03",
     "role": 1908
   },
   {
     "id": "08",
     "school": "222222",
-    "fullName": "Tom Cook2",
-    "email": "Tom2@dev.com",
+    "name": { "first": "thomas", "last": "cookie" },
+    "email": "thomas@dev.com",
     "password": "password04",
     "role": 8008
   }
