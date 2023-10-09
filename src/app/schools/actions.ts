@@ -16,6 +16,7 @@ export const getSchools = cache(async () => {
   await setTimeout(5000)
 
   schools.map((school) => {
+    // Will need to specify which fields should be getting returned
     // Can't worry too much about it now, but how can I clean this up?
     // Since arrays are passed by reference (kinda), is this why i can map through and change the values?
     Object.entries(school).map(([outerKey, outerValue]) => {
@@ -25,25 +26,22 @@ export const getSchools = cache(async () => {
             case 'directors':
             case 'guides':
             case 'parents':
-              value.map((id, idx) => {
-                value[idx] = users.find((user) => user.id === id)?.fullName || 'No Such User'
-              })
+              value.map((id, idx) => (value[idx] = users.find((user) => user.id === id)))
               break
             case 'students':
-              value.map((id, idx) => {
-                value[idx] = students.find((student) => student.id === id)?.fullName || 'No Such User'
-              })
+              value.map((id, idx) => (value[idx] = students.find((student) => student.id === id)))
               break
           }
         }
       })
       if (outerKey === 'classrooms' && Array.isArray(outerValue)) {
         outerValue.map((id, idx) => {
-          outerValue[idx] = classrooms.find((classroom) => classroom.id === id)?.name || 'No Such Classroom'
+          //@ts-ignore Will reevaluate when database is hooked up
+          outerValue[idx] = classrooms.find((classroom) => classroom.id === id)
         })
       }
     })
   })
 
-  return schools as ISchool[]
+  return schools as PopSchool[]
 })
