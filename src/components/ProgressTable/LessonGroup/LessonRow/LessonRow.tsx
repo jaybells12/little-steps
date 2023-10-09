@@ -19,7 +19,7 @@ export default function LessonRow({ lesson, students }: LessonRowProps) {
             <div
               data-cell={value}
               className={
-                'data-i:bg-accent/10 data-p:bg-accent/50 data-m:bg-accent data-m:text-white data-w:bg-second text-center uppercase font-bold rounded-xl leading-[34px] h-9 w-9 m-auto'
+                'data-i:bg-accent/10 data-p:bg-accent/50 data-m:bg-accent data-m:text-white data-w:bg-secondary text-center uppercase font-bold rounded-xl leading-[34px] h-9 w-9 m-auto'
               }
             >
               {value}
