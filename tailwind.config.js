@@ -3,11 +3,7 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
 
 module.exports = {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./src/pages/**/*.{js,ts,jsx,tsx,mdx}', './src/components/**/*.{js,ts,jsx,tsx,mdx}', './src/app/**/*.{js,ts,jsx,tsx,mdx}'],
   theme: {
     data: {
       i: 'cell="i"',
@@ -22,7 +18,7 @@ module.exports = {
       colors: {
         primary: '#FFF',
         accent: '#6ED1BF',
-        second: '#FFEBE4',
+        secondary: '#FFEBE4',
         lighttext: '#A0A0A0',
         darktext: '#404040',
       },
@@ -31,10 +27,8 @@ module.exports = {
       },
       backgroundImage: {
         home: "url('/bg_home.png')",
-        landing:
-          "linear-gradient(to bottom, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 90%), url('/bg_landing-page.png')",
-        signin:
-          "radial-gradient(circle at 32%, rgba(255,255,255,0)30%, rgb(255, 255, 255)45%),url('/bg_sign-in.png')",
+        landing: "linear-gradient(to bottom, rgba(255,255,255,0) 80%, rgba(255,255,255,1) 90%), url('/bg_landing-page.png')",
+        signin: "radial-gradient(circle at 32%, rgba(255,255,255,0)30%, rgb(255, 255, 255)45%),url('/bg_sign-in.png')",
         map: "url('/bg_cartography.png')",
       },
       backgroundSize: {
@@ -47,4 +41,3 @@ module.exports = {
   },
   plugins: [require('@tailwindcss/forms')],
 }
-
