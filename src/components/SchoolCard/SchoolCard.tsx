@@ -15,13 +15,13 @@ type SchoolCardProps = {
 }
 
 export default function SchoolCard({ name, hash, image, directors, guides, students, parents, abridged = false, className = '' }: SchoolCardProps) {
-  const directorName = directors[0].name ? getFullName(directors[0].name) : 'No Such User'
+  const directorName = directors[0]?.name ? getFullName(directors[0].name) : 'No Such User'
   return (
-    <div className={`bg-accent rounded-[3rem] px-10 py-8 mx-auto flex flex-col justify-center items-center w-fit ${className}`}>
+    <article className={`bg-accent rounded-[3rem] px-10 py-8 mx-auto flex flex-col justify-center items-center w-fit ${className}`}>
       <Image src={image} alt='Image of a school building' height={333} width={500} />
       <h2 className={'font-bold text-4xl'}>{name}</h2>
       <p className={'font-light text-sm'}>{hash}</p>
       <p className={'font-medium text-lg'}>{directorName}</p>
-    </div>
+    </article>
   )
 }
