@@ -1,34 +1,54 @@
-import classrooms from '@data/classrooms.json'
-import lessons from '@data/lessons.json'
-import students from '@data/students.json'
-import users from '@data/users.json'
+import classrooms from '@/data/classrooms.json'
+import lessons from '@/data/lessons.json'
+import students from '@/data/students.json'
+import users from '@/data/users.json'
 
-type ModelTypes = string | Array<string> | number | { [key: string]: ModelTypes }
+type SchoolDataPre = {
+  _id: string
+  name: string
+  hashcode: string
+  image: string
+  employees: {
+    directors: string[]
+    guides: string[]
+  }
+  clients: {
+    students: string[]
+    parents: string[]
+  }
+  classrooms: string[]
+}
 
-export default function populateRefences(model: { [key: string]: ModelTypes }) {
-  // Not for production, simplified implementation
+export default function populateReferences(model: SchoolDataPre) {
+  // Not for production
+  // this function will be unnecessry when database is implemented
   // Can't worry too much about it now, but how can I clean this up?
-  // Since arrays are passed by reference (kinda), is this why i can map through and change the values?
+  // Possibly need to return a new object here
+  let newObj = Object.assign({}, model)
+  // Array of k,v pairs where sometimes v is an object?
   Object.entries(model).map(([outerKey, outerValue]) => {
-    Object.entries(outerValue).map(([key, value]) => {
-      if (Array.isArray(value)) {
-        switch (key) {
-          case 'directors':
-          case 'guides':
-          case 'parents':
-            value.map((id, idx) => (value[idx] = users.find((user) => user.id === id)))
-            break
-          case 'students':
-            value.map((id, idx) => (value[idx] = students.find((student) => student.id === id)))
-            break
-        }
+    if (typeof outerValue === 'object') {
+      if (Array.isArray(outerValue) && outerKey === 'classrooms') {
+        //@ts-expect-error
+        newObj.classrooms = outerValue.map((id) => classrooms.find((classroom) => classroom.id === id) ?? 'No such Classroom')
+      } else {
+        Object.entries(outerValue).map(([innerKey, innerValue]) => {
+          switch (innerKey) {
+            case 'directors':
+            case 'guides':
+            case 'parents':
+              //@ts-expect-error
+              newObj[outerKey][innerKey] = innerValue.map((id) => users.find((user) => user.id === id) ?? 'No such User')
+              break
+            case 'students':
+              //@ts-expect-error
+              newObj[outerKey][innerKey] = innerValue.map((id) => students.find((student) => student.id === id) ?? 'No such Student')
+              break
+          }
+        })
       }
-    })
-    if (outerKey === 'classrooms' && Array.isArray(outerValue)) {
-      outerValue.map((id, idx) => {
-        //@ts-ignore
-        outerValue[idx] = classrooms.find((classroom) => classroom.id === id)
-      })
     }
   })
+
+  return newObj
 }
