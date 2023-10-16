@@ -2,7 +2,7 @@
   {
     "id": "01",
     "school": "111111",
-    "fullName": "James Bell",
+    "name": { "first": "James", "last": "Bell" },
     "details": {
       "birthday": "11/06/1985",
       "address": {
@@ -25,7 +25,7 @@
   {
     "id": "02",
     "school": "111111",
-    "fullName": "Yannick Polish",
+    "name": { "first": "Yannick", "last": "Polish" },
     "details": {
       "birthday": "08/12/1988",
       "address": {
@@ -48,7 +48,7 @@
   {
     "id": "03",
     "school": "222222",
-    "fullName": "Elsa Polish",
+    "name": { "first": "Elsa", "last": "Polish" },
     "details": {
       "birthday": "02/15/1987",
       "address": {
@@ -71,7 +71,7 @@
   {
     "id": "04",
     "school": "222222",
-    "fullName": "Abygael Holland",
+    "name": { "first": "Abygael", "last": "Holland" },
     "details": {
       "birthday": "05/12/2008",
       "address": {
@@ -94,7 +94,7 @@
   {
     "id": "05",
     "school": "222222",
-    "fullName": "Lorelei Chili",
+    "name": { "first": "Lorelei", "last": "Chili" },
     "details": {
       "birthday": "08/08/2012",
       "address": {

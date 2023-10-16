@@ -107,6 +107,8 @@ interface IStudent {
  * POPULATED DATABASE SCHEMA INTERFACES
  */
 
+type PopModelTypes = PopUser | PopClassroom | PopSchool | PopLesson | PopStudent
+
 interface PopUser {
   _id: mongoose.Schema.Types.ObjectId
   school: string
@@ -141,14 +143,14 @@ interface PopSchool {
   hashcode: string
   image: string
   employees: {
-    directors: Partial<PopUser>[]
-    guides: Partial<PopUser>[]
+    directors: PopUser[]
+    guides: PopUser[]
   }
   clients: {
-    students: Partial<PopStudent>[]
-    parents: Partial<PopUser>[]
+    students: PopStudent[]
+    parents: PopUser[]
   }
-  classrooms: Partial<PopClassroom>[]
+  classrooms: PopClassroom[]
 }
 
 interface PopStudent {
