@@ -15,7 +15,9 @@ type SchoolCardProps = {
 }
 
 export default function SchoolCard({ name, hash, image, directors, guides, students, parents, abridged = false, className = '' }: SchoolCardProps) {
-  const directorName = directors[0]?.name ? getFullName(directors[0].name) : 'No Such User'
+  console.log(directors)
+  const directorName = getFullName(directors[0]?.name)
+
   return (
     <article className={`bg-accent rounded-[3rem] px-10 py-8 mx-auto flex flex-col justify-center items-center w-fit ${className}`}>
       <Image src={image} alt='Image of a school building' height={333} width={500} />

@@ -10,10 +10,12 @@ import { getSchools } from './actions'
 import Link from 'next/link'
 import SchoolCard from '@/components/SchoolCard'
 
+export const revalidate = 3600
+
 //Async is how next js handles using this server action. Is it ok?
 export default async function SchoolsPage() {
   const schools = await getSchools()
-
+  console.log(schools)
   const schoolCardComponents = schools.map(({ _id, name, hashcode, image, employees: { directors } }, idx) => {
     return (
       <Link key={idx} href={`/schools/${_id}`}>
